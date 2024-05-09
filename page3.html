@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nutri Test Analyser</title>
+    <link rel="stylesheet" type="text/css" href="page3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Nutri Test Analyser</h1>
+        <form id="healthForm">
+            <label for="condition">Select Health Condition:</label>
+            <select id="condition" name="condition" onchange="updateForm()">
+                <option value="">Please select...</option>
+                <option value="diabetes">Diabetes</option>
+                <option value="cholesterol">High Cholesterol</option>
+                <option value="thyroid">Thyroid Disorders</option>
+                <option value="bloodPressure">Blood Pressure</option>
+                <option value="obesity">Obesity</option>
+            </select>
+
+            <!-- Diabetes parameters -->
+            <div id="diabetesParams" class="parameters">
+                <label for="fasting_glucose">Fasting Blood Glucose (mg/dL):</label>
+                <input type="number" id="fasting_glucose" name="fasting_glucose">
+                <label for="hbA1c">Hemoglobin A1c (%):</label>
+                <input type="number" id="hbA1c" name="hbA1c" step="0.1">
+                <label for="ogtt">Oral Glucose Tolerance Test (OGTT - 2hr, mg/dL):</label>
+                <input type="number" id="ogtt" name="ogtt">
+            </div>
+
+            <!-- Cholesterol parameters -->
+            <div id="cholesterolParams" class="parameters">
+                <label for="total_cholesterol">Total Cholesterol (mg/dL):</label>
+                <input type="number" id="total_cholesterol" name="total_cholesterol">
+                <label for="ldl">LDL Cholesterol (mg/dL):</label>
+                <input type="number" id="ldl" name="ldl">
+                <label for="hdl">HDL Cholesterol (mg/dL):</label>
+                <input type="number" id="hdl" name="hdl">
+            </div>
+
+            <!-- Thyroid parameters -->
+            <div id="thyroidParams" class="parameters">
+                <label for="tsh">Thyroid Stimulating Hormone (TSH, mIU/L):</label>
+                <input type="number" id="tsh" name="tsh" step="0.1">
+                <label for="free_t4">Free Thyroxine (T4, micrograms/dL):</label>
+                <input type="number" id="free_t4" name="free_t4" step="0.1">
+                <label for="t3">Triiodothyronine (T3, ng/dL):</label>
+                <input type="number" id="t3" name="t3" step="0.1">
+            </div>
+
+            <!-- Blood Pressure parameters -->
+            <div id="bloodPressureParams" class="parameters">
+                <label for="systolic">Systolic Blood Pressure (mm Hg):</label>
+                <input type="number" id="systolic" name="systolic">
+                <label for="diastolic">Diastolic Blood Pressure (mm Hg):</label>
+                <input type="number" id="diastolic" name="diastolic">
+                <label for="map">Mean Arterial Pressure (MAP, mm Hg):</label>
+                <input type="number" id="map" name="map">
+            </div>
+
+            <!-- Obesity parameters -->
+            <div id="obesityParams" class="parameters">
+                <label for="bmi">Body Mass Index (BMI, kg/m^2):</label>
+                <input type="number" id="bmi" name="bmi" step="0.1">
+                <label for="waist_circumference">Waist Circumference (inches):</label>
+                <input type="number" id="waist_circumference" name="waist_circumference">
+                <label for="whr">Waist-to-Hip Ratio (WHR):</label>
+                <input type="number" id="whr" name="whr" step="0.01">
+            </div>
+
+            <button type="button" onclick="getRecommendation()">Get Recommendation</button>
+        </form>
+        <div id="recommendation"></div>
+    </div>
+    
+    <script src="page3.js"></script>
+</body>
+</html>

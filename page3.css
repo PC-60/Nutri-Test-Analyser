@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 350px;
+}
+
+h1 {
+    color: #0056b3; /* Blue color for the title */
+    text-align: center;
+}
+
+label {
+    color: #333;
+}
+
+select, input, button {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #0056b3; /* Blue borders */
+    border-radius: 4px;
+}
+
+button {
+    background-color: #0056b3; /* Blue background for button */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003d7a; /* Darker blue on hover */
+}
+
+.parameters {
+    display: none; /* Hide all parameters initially */
+}
+
+#recommendation {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e6f7ff; /* Light blue background */
+    border: 1px solid #ccc;
+    color: #0056b3; /* Blue text for recommendations */
+    font-weight: bold;
+}
